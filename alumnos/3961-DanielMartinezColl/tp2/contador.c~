@@ -1,0 +1,30 @@
+#include <unistd.h>
+#include <string.h>
+#include <stdio.h>
+#include "servicio.h"
+
+int contarP(char *texto){
+	int palabras=0;
+	char *pos,*pch;
+
+	pch = strtok_r(texto," ,",&pos);
+	while(pch){
+		palabras++;
+		pch = strtok_r(NULL," ,",&pos);
+	}
+	return palabras;
+}
+
+char *mayus(char *texto){
+	int i=0;
+	for (i = 0; i < strlen(texto); i++){
+		if(texto[i] == 'l' && texto[i+1] == 'a' && texto[i+2] == ' '){
+			texto[i] = 'L';
+			texto[i+1] = 'A';
+		}
+		if(texto[i] == 'y' && texto[i+1] == ' '){
+			texto[i] = 'Y';
+		}
+	}
+	return texto;
+}
