@@ -37,4 +37,4 @@ $ ./tp2 -i noticia -o newfie
 * write()
 * pipe()
 * fork()
-
+* snprintf()

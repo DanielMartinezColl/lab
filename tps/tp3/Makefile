@@ -1,6 +1,6 @@
 CC=gcc
 CFLAGS=-g -Wall
-TARGETS=tp2
+TARGETS=tp3
 
 all: $(TARGETS)
 
